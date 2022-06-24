@@ -9,7 +9,7 @@
         <div>
                 <tr class="int_row">
                     <td class="int_name">{{ int.name|capfirst }}</td>
-                    <td>{{ int.traffic}}</td>
+                    <td class="int-traffic">{{ int.traffic}}</td>
                     <td class="col_expand_all">
                         ++
                     </td>
@@ -18,110 +18,124 @@
 
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a1}}</td>
-                    <td>{{int.a1_num}}</td>
+                    <td class="approach-num">{{int.a1_num}}</td>
                     <td class="expandChart expand-0">+</td>
                 </tr>
                     {% for app in appro|slice:":1"%}
                     <tr class = "hidden departures0 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d1}}</td>
-
                         <td class="dep dep-no">{{app.d1_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     <tr class = "hidden departures0 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d2}}</td>
                         <td class="dep dep-no">{{app.d2_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     <tr class = "hidden departures0 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d3}}</td>
                         <td class="dep dep-no">{{app.d3_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     <tr class = "hidden departures0 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d4}}</td>
                         <td class="dep dep-no">{{app.d4_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a2}}</td>
-                    <td>{{int.a2_num}}</td>
+                    <td class="approach-num">{{int.a2_num}}</td>
                     <td class="expandChart expand-1">+</td>
                 </tr>
                     {% for app in appro|slice:"1:2"%}
-                    <tr class = "hidden departures1 dep">
+                    <tr class = "hidden departures1 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d1}}</td>
 
                         <td class="dep dep-no">{{app.d1_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures1 dep">
+                    <tr class = "hidden departures1 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d2}}</td>
                         <td class="dep dep-no">{{app.d2_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures1 dep">
+                    <tr class = "hidden departures1 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d3}}</td>
                         <td class="dep dep-no">{{app.d3_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures1 dep">
+                    <tr class = "hidden departures1 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d4}}</td>
                         <td class="dep dep-no">{{app.d4_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a3}}</td>
-                    <td>{{int.a3_num}}</td>
+                    <td class="approach-num">{{int.a3_num}}</td>
                     <td class="expandChart expand-2">+</td>
                 </tr>
                     {% for app in appro|slice:"2:3"%}
-                    <tr class = "hidden departures2 dep">
+                    <tr class = "hidden departures2 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d1}}</td>
                         <td class="dep dep-no">{{app.d1_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures2 dep">
+                    <tr class = "hidden departures2 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d2}}</td>
                         <td class="dep dep-no">{{app.d2_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures2 dep">
+                    <tr class = "hidden departures2 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d3}}</td>
                         <td class="dep dep-no">{{app.d3_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures2 dep">
+                    <tr class = "hidden departures2 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d4}}</td>
                         <td class="dep dep-no">{{app.d4_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a4}}</td>
-                    <td>{{int.a4_num}}</td>
+                    <td class="approach-num">{{int.a4_num}}</td>
                     <td class="expandChart expand-3">+</td>
                 </tr>
                     {% for app in appro|slice:"3:4"%}
-                    <tr class = "hidden departures3 dep">
+                    <tr class = "hidden departures3 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d1}}</td>
                         <td class="dep dep-no">{{app.d1_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures3 dep">
+                    <tr class = "hidden departures3 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d2}}</td>
                         <td class="dep dep-no">{{app.d2_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures3 dep">
+                    <tr class = "hidden departures3 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d3}}</td>
                         <td class="dep dep-no">{{app.d3_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
-                    <tr class = "hidden departures3 dep">
+                    <tr class = "hidden departures3 dep dep-{{forloop.parentloop.counter0}}">
                         <td class="dep dep-name">{{app.d4}}</td>
                         <td class="dep dep-no">{{app.d4_num}}</td>
+                        <td class="dep dep-per"></td>
                     </tr>
                     {% endfor %}
 
         </div>
     {% endfor %}
     </table>
+
+</div>
+
     <div class="chart">
-
-
-        <canvas id="myChart" width="400" height="100"></canvas>
         <div class="canvas2">
-            <canvas id="myChart2" width="400" height="100"></canvas>
+            <canvas id="myChart2" width="600" height="200"></canvas>
         </div>
 
     </div>
-</div>
 {% endblock %}

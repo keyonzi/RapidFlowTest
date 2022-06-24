@@ -76,12 +76,14 @@ Text Domain: ample
 
 .int_table th, .int_table td {
 	padding: 3px;
-	border-width: 1px;
+	border-width: 0px;
 	border-style: solid;
 	border-color: #f79646 #ccc;
 	background-color: #2a2525;
 	color: #cfcdcd;
+	border-right: 0px solid;
 }
+
 
 .int_name:hover {
 	 visibility: visible;
@@ -97,6 +99,10 @@ td.approach {
     background-color: #7b7d7c;
 }
 
+td.approach-num {
+    padding-left: 20px;
+    background-color: #7b7d7c;
+}
 
 td.dep {
     padding-left: 40px;
@@ -106,6 +112,11 @@ td.dep {
 td.approach:hover{
     background-color:#0c3425;
 }
+
+.col_expand_all{
+    text-align: center;
+}
+
 
 /*--------------------------------------------------------------
 1.0 Reset
@@ -1741,6 +1752,7 @@ li.comment {
 	overflow: hidden;
 	padding: 50px 0 20px;
 	margin-top: 50px;
+	height: 275px;
 }
 .scrollup:hover{opacity: 0.6;}
 .copyright-info ul li {margin-bottom: 10px; float: left;margin-left: 25px;}

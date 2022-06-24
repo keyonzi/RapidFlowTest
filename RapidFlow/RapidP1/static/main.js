@@ -1,27 +1,9 @@
 var hiddenClass = 'hidden';
 var shownClass = 'toggled-from-hidden';
 
-//function petSectionHover() {
-//    var children = this;
-//    for(var i = 0; i < children.length; i++) {
-//        var child = children[i];
-//        if (child.className === hiddenClass) {
-//            child.className = shownClass;
-//        }
-//    }
-//}
-
-//function petSectionHover() {
-//    var hiddenrows = document.getElementsByClassName('hidden');
-//
-//    for(var i = 0; i < hiddenrows.length; i++) {
-//        var hiddenrow = hiddenrows[i];
-//        hiddenrow.className = shownClass
-//    }
-//}
-
 function expandArrival() {
 
+    //making sure running on the right table row
     var all_int_name = document.getElementsByClassName('int_name');
     for(var i = 0; i < all_int_name.length; i++) {
 
@@ -33,9 +15,13 @@ function expandArrival() {
     var a_row = "approaches" + row;
     var approach = document.getElementsByClassName(a_row);
 
+    var hideBool = false;
+
+    // hiding or unhiding on click depending on status
     for (var i = 0; i < approach.length; i++){
         test = approach[i].getElementsByTagName('td');
 
+        // making sure onclick doesn't work when there are no values
         if (test[0].innerHTML === ''){
         break;
         }
@@ -45,17 +31,82 @@ function expandArrival() {
             approach[i].classList.remove(hiddenClass);
 
             } else {
+
                 approach[i].classList.add(hiddenClass);
                 approach[i].classList.remove(shownClass);
+                hideBool= true;
+
         }
+
+    }
+
+    // colapse everything
+    if (hideBool){
+        for (var i=0; i < 4; i++){
+            var all_departures0 = document.getElementsByClassName('departures' + i);
+            for (var j=0; j< all_departures0.length; j++){
+                all_departures0[j].classList.add(hiddenClass);
+                all_departures0[j].classList.remove(shownClass);
+            }
+
+      }
+
     }
 
 }
+
+function toggleAll() {
+    var all_approach_name = document.getElementsByClassName('approaches0');
+    var all_shownClass = document.getElementsByClassName(shownClass);
+    var expand = false;
+
+    if (all_shownClass.length === 0){
+        console.log("showing");
+        expand = true;
+    }
+
+
+    // toggle the arrivals
+    for (var i = 0; i<all_approach_name.length; i++){
+        if (all_approach_name[i].classList.contains(hiddenClass) && expand) {
+            all_approach_name[i].classList.add(shownClass);
+            all_approach_name[i].classList.remove(hiddenClass);
+
+
+            } else {
+                all_approach_name[i].classList.add(hiddenClass);
+                all_approach_name[i].classList.remove(shownClass);
+        }
+
+    }
+
+    // toggle the departures
+    for (var i=0; i < 4; i++){
+            var all_departures0 = document.getElementsByClassName('departures' + i);
+            for (var j=0; j< all_departures0.length; j++){
+                console.log(all_departures0[j]);
+                if (all_departures0[j].classList.contains(hiddenClass) && all_departures0[j].classList.contains('dep-0') && expand) {
+                    all_departures0[j].classList.add(shownClass);
+                    all_departures0[j].classList.remove(hiddenClass);
+            } else {
+                all_departures0[j].classList.add(hiddenClass);
+                all_departures0[j].classList.remove(shownClass);
+                }
+            }
+
+    }
+
+
+
+}
+
 
 
 function expandDepart() {
     var all_approach_name = document.getElementsByClassName('approach');
     var all_departures0 = document.getElementsByClassName('departures0');
+
+    var total_veh = parseInt(this.nextElementSibling.innerHTML);
 
     for(var i = 0; i < all_approach_name.length; i++) {
 
@@ -68,15 +119,19 @@ function expandDepart() {
     var approach = document.getElementsByClassName(a_row);
 
     for (var i = 0; i < approach.length; i++){
-        test = approach[i].getElementsByTagName('td');
+        tdList = approach[i].getElementsByTagName('td');
 
-        if (test[0].innerHTML === ''){
+        if (tdList[0].innerHTML === ''){
         break;
         }
 
         if (approach[i].classList.contains(hiddenClass) && all_departures0[i].classList.contains('dep-0') ) {
             approach[i].classList.add(shownClass);
             approach[i].classList.remove(hiddenClass);
+
+
+            //populate % if possible
+            tdList[2].innerHTML = ((parseInt(tdList[1].innerHTML) / total_veh) * 100).toFixed(0) + "%";
 
             } else {
                 approach[i].classList.add(hiddenClass);
@@ -154,6 +209,7 @@ function expandChart() {
     var interSections = document.getElementsByClassName('int_name');
     var approachSections = document.getElementsByClassName('approach');
     var expandCharts = document.getElementsByClassName('expandChart');
+    var expandAll = document.getElementsByClassName('col_expand_all');
 
     for(var i = 0; i < interSections.length; i++) {
         interSections[i].addEventListener('click', expandArrival);
@@ -165,6 +221,10 @@ function expandChart() {
 
     for(var i = 0; i < expandCharts.length; i++) {
         expandCharts[i].addEventListener('click', expandChart);
+    }
+
+    for(var i = 0; i < expandAll.length; i++) {
+        expandAll[i].addEventListener('click', toggleAll);
     }
 
 }());

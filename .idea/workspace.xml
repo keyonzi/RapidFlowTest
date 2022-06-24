@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1228a3b-d764-4388-b039-dc2e23179853" name="Default Changelist" comment="" />
+    <list default="true" id="c1228a3b-d764-4388-b039-dc2e23179853" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RapidFlow/RapidP1/templates/pet_detail.html" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,7 +12,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="87" column="53" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/static/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/static/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="1754" column="15" selection-start-line="1754" selection-start-column="15" selection-end-line="1754" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -21,15 +52,18 @@
       <find>class</find>
       <find>hover</find>
       <find>toggled-from</find>
+      <find>footer</find>
+      <find>body</find>
+      <find>wrapper</find>
+      <find>.footer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/RapidFlow" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RapidFlow/RapidP1/static/style.css" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/models.py" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/admin.py" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/templates/base.html" />
@@ -37,6 +71,7 @@
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/templates/editors/chart.html" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidFlow/urls.py" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/views.py" />
+        <option value="$PROJECT_DIR$/RapidFlow/RapidP1/static/style.css" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/templates/home.html" />
         <option value="$PROJECT_DIR$/RapidFlow/RapidP1/static/main.js" />
       </list>
@@ -63,6 +98,32 @@
               <item name="RapidFlowTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RapidFlowTest" type="462c0819:PsiDirectoryNode" />
               <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RapidFlowTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RapidFlowTest" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RapidFlowTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RapidFlowTest" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidP1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RapidFlowTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RapidFlowTest" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidP1" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RapidFlowTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RapidFlowTest" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidFlow" type="462c0819:PsiDirectoryNode" />
+              <item name="RapidP1" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -106,8 +167,18 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.37598735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -133,13 +204,6 @@
     <entry file="file://$PROJECT_DIR$/RapidFlow/static/style.css" />
     <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/templates/pet_detail.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/static/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/admin.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -202,17 +266,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/static/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="1754" column="15" selection-start-line="1754" selection-start-column="15" selection-end-line="1754" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="92" column="51" selection-start-line="92" selection-start-column="51" selection-end-line="92" selection-end-column="51" />
+        <state relative-caret-position="147">
+          <caret line="87" column="53" selection-start-line="87" selection-start-column="53" selection-end-line="87" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RapidFlow/RapidP1/static/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="24" column="67" selection-start-line="24" selection-start-column="67" selection-end-line="24" selection-end-column="67" />
+        <state relative-caret-position="72">
+          <caret line="62" column="33" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -143,14 +143,20 @@ function expandDepart() {
 function expandChart() {
            var depNames = document.getElementsByClassName('dep-name');
            var vehNum = document.getElementsByClassName('dep-no');
-           var ctx = document.getElementById('myChart2').getContext('2d');
+
            var nameList = [];
            var vehList = [];
 
            var mult_dep = mult_veh = 0;
 
-           //document.getElementById("myChart2").remove();
-
+            // remove old chart to fix hover bug
+           document.getElementById("myChart2").remove();
+           var canv=document.createElement("canvas");
+           canv.setAttribute("id", "myChart2");
+           canv.setAttribute("width", "600");
+           canv.setAttribute("height", "200");
+           document.getElementById("chart-parent").append(canv);
+           var ctx = document.getElementById('myChart2').getContext('2d');
 
            // more hacks but running out of time, this is to grab the right numbers
            if (this.classList.contains('expand-0')){
@@ -169,7 +175,6 @@ function expandChart() {
                 nameList.push(depNames[mult_dep].innerHTML)
                 vehList.push(parseInt(vehNum[mult_dep].innerHTML));
            }
-
 
            var myChart = new Chart(ctx, {
                 type: 'doughnut',

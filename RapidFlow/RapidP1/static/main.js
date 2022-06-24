@@ -61,7 +61,6 @@ function toggleAll() {
     var expand = false;
 
     if (all_shownClass.length === 0){
-        console.log("showing");
         expand = true;
     }
 
@@ -84,7 +83,6 @@ function toggleAll() {
     for (var i=0; i < 4; i++){
             var all_departures0 = document.getElementsByClassName('departures' + i);
             for (var j=0; j< all_departures0.length; j++){
-                console.log(all_departures0[j]);
                 if (all_departures0[j].classList.contains(hiddenClass) && all_departures0[j].classList.contains('dep-0') && expand) {
                     all_departures0[j].classList.add(shownClass);
                     all_departures0[j].classList.remove(hiddenClass);
@@ -106,6 +104,8 @@ function expandDepart() {
     var all_approach_name = document.getElementsByClassName('approach');
     var all_departures0 = document.getElementsByClassName('departures0');
 
+    //console.log(this)
+    //console.log(this.nextElementSibling.innerHTML)
     var total_veh = parseInt(this.nextElementSibling.innerHTML);
 
     for(var i = 0; i < all_approach_name.length; i++) {
@@ -149,6 +149,9 @@ function expandChart() {
 
            var mult_dep = mult_veh = 0;
 
+           //document.getElementById("myChart2").remove();
+
+
            // more hacks but running out of time, this is to grab the right numbers
            if (this.classList.contains('expand-0')){
                 mult_dep = mult_veh = 0;
@@ -176,12 +179,12 @@ function expandChart() {
                         label:'# of vehicles',
                         data: vehList,
                         backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                            'rgba(255, 99, 132)',
+                            'rgba(54, 162, 235)',
+                            'rgba(255, 206, 86)',
+                            'rgba(75, 192, 192)',
+                            'rgba(153, 102, 255)',
+                            'rgba(255, 159, 64)'
                         ],
                         borderColor: [
                             'rgba(255, 99, 132, 1)',
@@ -220,6 +223,7 @@ function expandChart() {
     }
 
     for(var i = 0; i < expandCharts.length; i++) {
+        //expandDepart(approachSections[i]);
         expandCharts[i].addEventListener('click', expandChart);
     }
 

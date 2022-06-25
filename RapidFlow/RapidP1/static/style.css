@@ -113,8 +113,16 @@ td.approach:hover{
     background-color:#0c3425;
 }
 
+td.expandChart:hover{
+    background-color:#0b3f2bc4;
+}
+
 .col_expand_all{
     text-align: center;
+}
+
+td.col_expand_all:hover{
+    background-color:#5f5868;
 }
 
 

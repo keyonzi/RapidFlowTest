@@ -26,6 +26,7 @@ function expandArrival() {
         break;
         }
 
+        // changing visibility based on if it was visible or not
         if (approach[i].classList.contains(hiddenClass)) {
             approach[i].classList.add(shownClass);
             approach[i].classList.remove(hiddenClass);
@@ -40,7 +41,7 @@ function expandArrival() {
 
     }
 
-    // colapse everything
+    // colapse everything so that subtables collapse
     if (hideBool){
         for (var i=0; i < 4; i++){
             var all_departures0 = document.getElementsByClassName('departures' + i);
@@ -60,10 +61,13 @@ function toggleAll() {
     var all_shownClass = document.getElementsByClassName(shownClass);
     var expand = false;
 
+    // checking to see if anything is already expanded
     if (all_shownClass.length === 0){
         expand = true;
     }
 
+    // getting the values of approaches
+    var all_app_num = document.getElementsByClassName('app-num-0');
 
     // toggle the arrivals
     for (var i = 0; i<all_approach_name.length; i++){
@@ -71,8 +75,16 @@ function toggleAll() {
             all_approach_name[i].classList.add(shownClass);
             all_approach_name[i].classList.remove(hiddenClass);
 
-
             } else {
+             // remove old chart to fix hover bug
+                document.getElementById("myChart2").remove();
+
+                // have to recreate the element so chart can be built
+                var canv=document.createElement("canvas");
+                canv.setAttribute("id", "myChart2");
+                canv.setAttribute("width", "600");
+                canv.setAttribute("height", "200");
+                document.getElementById("chart-parent").append(canv);
                 all_approach_name[i].classList.add(hiddenClass);
                 all_approach_name[i].classList.remove(shownClass);
         }
@@ -82,8 +94,12 @@ function toggleAll() {
     // toggle the departures
     for (var i=0; i < 4; i++){
             var all_departures0 = document.getElementsByClassName('departures' + i);
+
             for (var j=0; j< all_departures0.length; j++){
                 if (all_departures0[j].classList.contains(hiddenClass) && all_departures0[j].classList.contains('dep-0') && expand) {
+                    //need to do the % for expand all too
+                    tdList = all_departures0[j].getElementsByTagName('td');
+                    tdList[2].innerHTML = ((parseInt(tdList[1].innerHTML) / parseInt(all_app_num[i].innerHTML)) * 100).toFixed(0) + "%";
                     all_departures0[j].classList.add(shownClass);
                     all_departures0[j].classList.remove(hiddenClass);
             } else {
@@ -104,10 +120,10 @@ function expandDepart() {
     var all_approach_name = document.getElementsByClassName('approach');
     var all_departures0 = document.getElementsByClassName('departures0');
 
-    //console.log(this)
-    //console.log(this.nextElementSibling.innerHTML)
+    // grab value of the approach
     var total_veh = parseInt(this.nextElementSibling.innerHTML);
 
+    // helps find which row you are in so know which to expand
     for(var i = 0; i < all_approach_name.length; i++) {
 
         if (this === all_approach_name[i]){
@@ -118,13 +134,17 @@ function expandDepart() {
     var a_row = "departures" + row;
     var approach = document.getElementsByClassName(a_row);
 
+    // loop through and expand the departures for the approach
     for (var i = 0; i < approach.length; i++){
+
+        // get list of the cells so can populate with %
         tdList = approach[i].getElementsByTagName('td');
 
         if (tdList[0].innerHTML === ''){
         break;
         }
 
+        // once again hide the shown and vice versa :)
         if (approach[i].classList.contains(hiddenClass) && all_departures0[i].classList.contains('dep-0') ) {
             approach[i].classList.add(shownClass);
             approach[i].classList.remove(hiddenClass);
@@ -151,6 +171,8 @@ function expandChart() {
 
             // remove old chart to fix hover bug
            document.getElementById("myChart2").remove();
+
+           // have to recreate the element so chart can be built
            var canv=document.createElement("canvas");
            canv.setAttribute("id", "myChart2");
            canv.setAttribute("width", "600");
@@ -176,6 +198,7 @@ function expandChart() {
                 vehList.push(parseInt(vehNum[mult_dep].innerHTML));
            }
 
+            //create chart
            var myChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {

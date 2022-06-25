@@ -18,7 +18,7 @@
 
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a1}}</td>
-                    <td class="approach-num">{{int.a1_num}}</td>
+                    <td class="approach-num app-num-{{ forloop.counter0 }}">{{int.a1_num}}</td>
                     <td class="expandChart expand-0">+</td>
                 </tr>
                     {% for app in appro|slice:":1"%}
@@ -45,7 +45,7 @@
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a2}}</td>
-                    <td class="approach-num">{{int.a2_num}}</td>
+                    <td class="approach-num app-num-{{ forloop.counter0 }}">{{int.a2_num}}</td>
                     <td class="expandChart expand-1">+</td>
                 </tr>
                     {% for app in appro|slice:"1:2"%}
@@ -73,7 +73,7 @@
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a3}}</td>
-                    <td class="approach-num">{{int.a3_num}}</td>
+                    <td class="approach-num app-num-{{ forloop.counter0 }}">{{int.a3_num}}</td>
                     <td class="expandChart expand-2">+</td>
                 </tr>
                     {% for app in appro|slice:"2:3"%}
@@ -100,7 +100,7 @@
                     {% endfor %}
                 <tr class = "hidden approaches{{ forloop.counter0 }}">
                     <td class="approach">{{int.a4}}</td>
-                    <td class="approach-num">{{int.a4_num}}</td>
+                    <td class="approach-num app-num-{{ forloop.counter0 }}">{{int.a4_num}}</td>
                     <td class="expandChart expand-3">+</td>
                 </tr>
                     {% for app in appro|slice:"3:4"%}

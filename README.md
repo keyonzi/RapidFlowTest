@@ -8,13 +8,14 @@ Since during interviews I learned that Django framework was being used, I decide
 
 STEPS:
 
-Install required packages by running "pip install -r requirements.txt" from terminal<br>
+Install required packages by running "pip install -r requirements.txt" from terminal (create environment if you wish)<br>
 Type "python manage.py runserver" in the terminal and push enter<br>
 Access the local host URL to see the table.<br>
 
 
 
 **Features**<br>
--Clicking on any of the Intersection names will expand the table.<br>
+-Clicking on any of the Intersection names will expand the table. (Note: only first intersection expands because there was no data for the others)<br>
+	
 -Clicking on '++' will either collapse the entire table, or expand the entire table.<br>
 -Clicking on '+' will create a graph below the table, and clicking any of the other single '+' will overwrite the chart and create a new one.
